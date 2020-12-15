@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: GPL-3.0
-//https://shasta.tronscan.org/#/address/TSkfZFsghmBkMAK8vHjFVyj9zNWaAcmG73
 
 pragma solidity >=0.5.0 <0.7.0;
 
