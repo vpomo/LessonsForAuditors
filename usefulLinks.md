@@ -6,9 +6,9 @@
 02 | Пример реализации: https://ethereum.stackexchange.com/questions/7491/how-are-solidity-integer-overflows-handled?rq=1. Библиотека для безопасной работы с числами https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol.
 03 | Как установить MetaMask: https://blog.bankex.org/how-to-buy-ethereum-using-metamask-ccea0703daec
 04 | Удаление элемента массива: https://ethereum.stackexchange.com/questions/1527/how-to-delete-an-element-at-a-certain-index-in-an-array
-05 | Модификаторы доступа: https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/. Отличия между ними: https://medium.com/blockchannel/the-use-of-revert-assert-and-require-in-solidity-and-the-new-revert-opcode-in-the-evm-1a3a7990e06e
-06 | .
-07 | .
+05 | Модификаторы доступа: https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/. Отличия между ними: https://medium.com/blockchannel/the-use-of-revert-assert-and-require-in-solidity-and-the-new-revert-opcode-in-the-evm-1a3a7990e06e , Где лучше хранить данные: https://ethereum.stackexchange.com/questions/2592/store-data-in-mapping-vs-array
+06 | Взаимодействия между двумя контрактами: https://ethereum.stackexchange.com/questions/1599/basic-example-of-interaction-between-2-contracts
+07 | Про fallback функции: https://medium.com/upstate-interactive/the-truth-about-fallback-functions-in-solidity-a2c604f8e66b. 3 метода отправки эфира: https://medium.com/daox/three-methods-to-transfer-funds-in-ethereum-by-means-of-solidity-5719944ed6e9. В 6-ой версии изменения для fallback: https://blog.soliditylang.org/2020/03/26/fallback-receive-split/  
 08 | Надо прочитать про `indexed` в `event`: https://ethereum.stackexchange.com/questions/8658/what-does-the-indexed-keyword-do
 09 | .
 10 | Работа с `enum` : https://medium.com/@jeancvllr/solidity-tutorial-all-about-enums-684adcc0b38e
@@ -23,3 +23,7 @@
 19 | Что это такое: https://quantstamp.com/blog/what-is-a-re-entrancy-attack. Разбор атаки на примере: https://medium.com/@gus_tavo_guim/reentrancy-attack-on-smart-contracts-how-to-identify-the-exploitable-and-an-example-of-an-attack-4470a2d8dfe4. Защита от Reentrancy-атак: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol.
 19 | 
 21 | Про ERC20: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
+
+
+
+https://medium.com/coinmonks/solidity-tx-origin-attacks-58211ad95514
