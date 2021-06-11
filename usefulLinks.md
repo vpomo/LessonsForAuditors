@@ -23,6 +23,8 @@
 19 | Что это такое: https://quantstamp.com/blog/what-is-a-re-entrancy-attack. Разбор атаки на примере: https://medium.com/@gus_tavo_guim/reentrancy-attack-on-smart-contracts-how-to-identify-the-exploitable-and-an-example-of-an-attack-4470a2d8dfe4. Защита от Reentrancy-атак: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol.
 19 | 
 21 | Про ERC20: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
+22 | https://ethereum.stackexchange.com/questions/76929/tx-origin-alternative?noredirect=1&lq=1
+23 | https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall
 
 
 
