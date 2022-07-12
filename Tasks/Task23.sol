@@ -12,17 +12,21 @@ contract D {
   function callSetN(address _contractE, uint _n) external {
      (bool success, bytes memory returnData) = _contractE.call(abi.encodeWithSignature("setN(uint256)", _n));
      emit LogResult(success, returnData);
-    // call from user: E's storage is set, D is not modified 
+     // call from user: E's storage is set, D is not modified 
+     // msg.sender is contract D in E's storage
+    
+     // call from contract C: E's storage is set, D is not modified
+     // msg.sender is contract C in E's storage
   }
 
-  function delegatecallSetN(address _contractE, uint _n) external {
+  function delegateCallSetN(address _contractE, uint _n) external {
      (bool success, bytes memory returnData) = _contractE.delegatecall(abi.encodeWithSignature("setN(uint256)", _n));
      emit LogResult(success, returnData);
      // call from user: D's storage is set, E is not modified 
      // msg.sender is user's wallet
      
      // call from contract C: D's storage is set
-     // msg.sender is contract C
+     // msg.sender is contract D
   }
 }
 
@@ -43,7 +47,7 @@ contract E {
 
 contract C {
     function checkDelegateCallContractD(D _d, address _e, uint _n) external {
-        _d.delegatecallSetN(_e, _n);
+        _d.delegateCallSetN(_e, _n);
         // D's storage updated, E's storage not modified
         // msg.sender is contract C
     }

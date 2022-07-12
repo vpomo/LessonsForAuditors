@@ -1,32 +1,17 @@
-// SPDX-License-Identifier: GPL-3.0
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0 <0.9.0;
 
-pragma solidity >=0.5.0 <0.7.0;
+contract Task05 {
 
-contract SafeMath {
+    mapping (address=>mapping(uint256=>bool)) depositType;
 
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-        uint256 c = a + b;
-        require(c >= a, "SafeMath: addition overflow");
-
-        return c;
+    function setDepositTypeEnable(address _user, uint256 _type, bool _active) external {
+        require(_user != address(0));
+        depositType[_user][_type] = _active;
     }
 
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-        require(b <= a, "SafeMath: subtraction overflow");
-        uint256 c = a - b;
-        return c;
+    function getDepositTypeEnable(address _user, uint256 _type) external view returns(bool) {
+        require(_user != address(0));
+        return depositType[_user][_type];
     }
-
-}
-
-contract Task05 is SafeMath {
-
-    function checkAdd(uint256 valueA, uint256 valueB) external pure returns (uint256) {
-        return add(valueA, valueB);
-    }
-
-    function checkSub(uint256 valueA, uint256 valueB) external pure returns (uint256) {
-        return sub(valueA, valueB);
-    }
-
 }
