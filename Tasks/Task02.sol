@@ -1,17 +1,20 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0 <0.9.0;
+pragma solidity >=0.4.0 <0.5.0;
 
 contract Task02 {
 
-    uint8 private a;
-    uint8 private b;
+    uint8 public result;
+    bool public isOverflow;
+
+    uint8 public a;
+    uint8 public b;
 
     function setAB(uint8 valueA, uint8 valueB) external {
         a = valueA;
         b = valueB;
     }
 
-    function isAddOverflow() external view returns(bool isOverflow, uint8 result) {
+    function setAddOverflow() external {
         result = a + b;
         if (a > b) {
             isOverflow = result < a;
@@ -20,7 +23,7 @@ contract Task02 {
         }
     }
 
-    function isSubOverflow() external view returns(bool isOverflow, uint8 result) {
+    function setSubOverflow() external {
         result = a - b;
         isOverflow = result > a;
     }
